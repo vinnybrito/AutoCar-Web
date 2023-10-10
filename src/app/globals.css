@@ -17,11 +17,13 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: azure;
+  background: #202022;
 }
+
+@font-face {
+  font-family: 'NATS Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('../fonts/NATS-Regular.woff'), url('../fonts/NATS-Regular.woff') format('woff');
+  }
