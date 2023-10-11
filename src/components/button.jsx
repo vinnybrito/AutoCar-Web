@@ -1,9 +1,14 @@
 import Link from "next/link";
 
-export default function Button({ children }) {
+export default function Button({children, type="link", ...props}) {
     return (
-        <Link href="#" className="bg-black px-5 py-3 rounded mt-8" >
-            {children}
-        </Link>
+        (type === "link") ?
+            <Link href="#" {...props} className="bg-black px-4 py-2 rounded mt-8" >
+                {children}
+            </Link>
+            :
+            <button {...props} className="bg-black px-4 py-2 rounded mt-8" >
+                {children}
+            </button>
     )
 }

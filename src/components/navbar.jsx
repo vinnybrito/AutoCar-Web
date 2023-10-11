@@ -7,7 +7,7 @@ export default function NavBar() {
         <nav className=" flex items-center justify-between bg-black p-6">
 
           <Link href="/" className="inline-block transition-transform transform hover:scale-110">
-            <Image src={logo} alt="logo"/>
+            <Image src={logo} alt="logo" width={75} height={30}/>
           </Link>
 
           <div className="w-2/3 rounded-lg overflow-hidden">
