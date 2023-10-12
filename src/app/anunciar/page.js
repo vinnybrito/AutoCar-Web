@@ -1,6 +1,7 @@
 import Button from '@/components/button'
 import NavBar from '@/components/navbar'
 import DataRow from './datarow'
+import Footer from '@/components/footer'
 
 async function carregarDados() {
     const url = "http://localhost:8080/anunciar"
@@ -44,11 +45,11 @@ export default async function PageAnunciar() {
             </div>
           </div>
 
-          <div className="bg-stone-500 max-w-4xl mt-8 ml-12 h-96 rounded-lg ">
+          <div className="bg-stone-500 max-w-4xl mt-8 ml-12 rounded-lg ">
 
             <div className="pt-10 h-24 pr-6 flex justify-between">
               <div>
-                <h2>.</h2>
+                <h2></h2>
               </div>
               <div>
                 <Button href="/anunciar/new">
@@ -57,12 +58,11 @@ export default async function PageAnunciar() {
               </div>
             </div>
 
-            <div className="bg-red-700 space-y-2">
-              {anuncios.map(anuncio => <DataRow key={anuncio.id} anuncio={anuncio}/>)}
+            <div className=" space-y-2">
+              {anuncios.map(anuncio => <DataRow id={anuncio.id} key={anuncio.id} anuncio={anuncio}/>)}
             </div>
 
           </div>
-
 
         </div>
       </main>

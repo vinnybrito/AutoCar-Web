@@ -2,6 +2,7 @@ import NavBar from '@/components/navbar'
 import Image from 'next/image';
 import Car from "@/assets/ford.png";
 import Button from '@/components/button';
+import Footer from '@/components/footer';
 
 export default function Home() {
   return (
@@ -52,6 +53,8 @@ export default function Home() {
           </button>
         </div>
       </div>
+
+      <Footer />
     </>
   )
 }
