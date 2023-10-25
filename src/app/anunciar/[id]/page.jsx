@@ -12,7 +12,6 @@ export default async function AnuncioNew({ params }) {
             <NavBar />
             <FormEdit anuncio={anuncio} />
             <Footer />
-
         </>
     )
 }

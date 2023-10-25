@@ -1,9 +1,9 @@
 import Button from '@/components/button'
 import NavBar from '@/components/navbar'
 import DataRow from './datarow'
-import Footer from '@/components/footer'
 
 async function carregarDados() {
+  
     const url = "http://localhost:8080/anunciar"
     const resp = await fetch(url)
 

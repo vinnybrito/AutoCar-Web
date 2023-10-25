@@ -68,6 +68,5 @@ export default function DataRow({ anuncio, id }) {
 
         </div>
 
-        
     )
 }

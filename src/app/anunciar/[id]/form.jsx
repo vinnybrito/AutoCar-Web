@@ -36,7 +36,7 @@ export default function FormEdit({anuncio}) {
         <main className="flex-col flex items-center justify-center">
 
             <h1 className="text-4xl font-semibold text-center mb-4 text-white mt-14">
-                Faça a edição do seu anúncio?
+                Faça a edição do seu anúncio!
             </h1>
 
             <div className=" w-96 mt-5">
@@ -48,27 +48,27 @@ export default function FormEdit({anuncio}) {
                         className="text-red-400">{messages.find(m => m.field === "marca")?.message}
                     </span>
 
-                    <InputText name="modelo" Label="Modelo" />
+                    <InputText name="modelo" Label="Modelo" value={anuncioEdit.modelo} onChange={(e) => handleFieldChange("modelo", e.target.value)}/>
                     <span
                         className="text-red-400">{messages.find(m => m.field === "modelo")?.message}
                     </span>
 
-                    <InputText name="anoModelo" Label="Ano do Modelo" />
+                    <InputText name="anoModelo" Label="Ano do Modelo" value={anuncioEdit.anoModelo} onChange={(e) => handleFieldChange("anoModelo", e.target.value)}/>
                     <span
                         className="text-red-400">{messages.find(m => m.field === "anoModelo")?.message}
                     </span>
 
-                    <InputText name="anoFabricacao" Label="Ano de Fabricação" />
+                    <InputText name="anoFabricacao" Label="Ano de Fabricação" value={anuncioEdit.anoFabricacao} onChange={(e) => handleFieldChange("anoFabricacao", e.target.value)}/>
                     <span
                         className="text-red-400">{messages.find(m => m.field === "anoFabricacao")?.message}
                     </span>
 
-                    <InputText name="versao" Label="Versão" />
+                    <InputText name="versao" Label="Versão" value={anuncioEdit.versao} onChange={(e) => handleFieldChange("versao", e.target.value)}/>
                     <span
                         className="text-red-400">{messages.find(m => m.field === "versao")?.message}
                     </span>
 
-                    <InputText name="cor" Label="Cor" />
+                    <InputText name="cor" Label="Cor" value={anuncioEdit.cor} onChange={(e) => handleFieldChange("cor", e.target.value)}/>
                     <span
                         className="text-red-400">{messages.find(m => m.field === "cor")?.message}
                     </span>
@@ -79,7 +79,7 @@ export default function FormEdit({anuncio}) {
 
                     <div className="flex justify-around">
                         <Button type="button">VOLTAR</Button>
-                        <Button type="button">PUBLICAR</Button>
+                        <Button type="button">SALVAR</Button>
                     </div>
                 </form>
 
