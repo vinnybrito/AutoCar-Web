@@ -71,3 +71,16 @@ export async function update(anuncio) {
 
     revalidatePath("/anunciar")
 }
+
+export async function carregarDados() {
+  
+    const resp = await fetch(url)
+
+    if (resp.status !== 200) {
+      alert("Erro ao buscar dados de anuncios")
+      return
+    }
+
+    return await resp.json()
+
+}

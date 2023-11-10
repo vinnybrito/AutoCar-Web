@@ -1,20 +1,7 @@
 import Button from '@/components/button'
 import NavBar from '@/components/navbar'
 import DataRow from './datarow'
-
-async function carregarDados() {
-  
-    const url = "http://localhost:8080/anunciar"
-    const resp = await fetch(url)
-
-    if (resp.status !== 200) {
-      alert("Erro ao buscar dados de anuncios")
-      return
-    }
-
-    return await resp.json()
-
-}
+import { carregarDados } from '@/actions/anuncios'
 
 export default async function PageAnunciar() {
 
