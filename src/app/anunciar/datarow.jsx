@@ -39,7 +39,7 @@ export default function DataRow({ anuncio, id }) {
 
                 <div className="md:w-2/3 md:pl-4 mt-4 md:mt-0">
 
-                    <div className="bg-yellow-500 p-2 rounded-md">
+                    <div className="bg-yellow-500 p-4 rounded-md">
                         <h2 className="text-black font-bold text-3xl">
                             {anuncio.marca} {anuncio.modelo}
                         </h2>

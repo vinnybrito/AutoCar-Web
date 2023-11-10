@@ -1,7 +1,7 @@
 "use server"
 
 import { revalidatePath } from "next/cache"
-const url = "http://localhost:8080/anunciar"
+const url = process.env.NEXT_PUBLIC_API_URL + "/anunciar"
 
 export async function create(data) {
 
