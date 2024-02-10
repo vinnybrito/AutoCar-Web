@@ -10,10 +10,11 @@ export default function Home() {
       <NavBar />
 
       {/* ---------- DIV DE ANÚNCIO ----------*/}
-      <div className=" flex items-center justify-center p-10 mt-10 rounded-xl mx-auto" style={{ maxWidth: '1000px' }}>
+
+      <div className="flex items-center justify-center p-10 mt-10 rounded-xl mx-auto" style={{ maxWidth: '1000px' }}>
 
         <div className="w-1/2">
-          <Image src={Car} alt="Carro" width={500} height={300}/>
+          <Image src={Car} alt="Carro" width={500} height={300} />
         </div>
 
         <div className="flex flex-col text-white text-center w-1/2 pr-10 border-r-4 border-yellow-500 justify-center h-52">
@@ -36,23 +37,35 @@ export default function Home() {
 
       {/*-----------CAMPO DE BUSCA VEICULO -----------*/}
 
-      <div className="bg-black p-6 mt-16 rounded-xl mx-auto" style={{ maxWidth: '1000px' }}>
+      <div>
 
-        <p className="text-white text-lg mb-2">
-          Procure o modelo ideal:
-        </p>
-        
-        <div className="relative mt-2 mb-8">
-          <input
-            type="text"
-            placeholder="Escolha seu modelo favorito"
-            className="w-full h-16 bg-gray-800 text-white rounded-xl pl-6 pr-20 focus:outline-none"
-          />
-          <button className="absolute top-0 right-0 h-full w-40 bg-yellow-600 text-white font-bold rounded-tr-xl rounded-br-xl hover:bg-yellow-500">
-            Buscar
-          </button>
+        <div className="p-6 mt-16 rounded-xl mx-auto" style={{ maxWidth: '1000px' }}>
+          <h1 className="text-white mb-2 text-xl">
+            Procure o Modelo Ideal
+          </h1>
+          <h2 className="text-white mb-2 text-3xl font-bold">
+            Catálogo
+          </h2>
+        </div>
+
+        <div className="bg-black p-6 rounded-xl mx-auto" style={{ maxWidth: '1000px' }}>
+
+          <div className="relative mt-6 mb-6">
+            <input
+              type="text"
+              placeholder="Escolha seu modelo favorito"
+              className="w-full h-16 bg-gray-800 text-white rounded-xl pl-6 pr-20 focus:outline-none"
+            />
+            <button className="absolute top-0 right-0 h-full w-40 bg-yellow-600 text-white font-bold rounded-tr-xl rounded-br-xl hover:bg-yellow-500">
+              Buscar
+            </button>
+          </div>
         </div>
       </div>
+
+      {/*------------------------------------------------------------------*/}
+
+      {/*-----------CAMPO SOBRE EMPRESAS E SERVIÇOS-----------*/}
 
       <Footer />
     </>

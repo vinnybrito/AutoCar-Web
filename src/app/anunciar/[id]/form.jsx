@@ -40,7 +40,7 @@ export default function FormEdit({anuncio}) {
             </h1>
 
             <div className=" w-96 mt-5">
-
+                
                 <form action={onSubmit}>
 
                     <InputText name="marca" Label="Marca" value={anuncioEdit.marca} onChange={(e) => handleFieldChange("marca", e.target.value)}/>

@@ -1,0 +1,31 @@
+
+@media (min-width: 768px) {
+    .anuncio-container {
+      flex-direction: row;
+    }
+  
+    #anuncio-imagem {
+      width: 100%;
+    }
+  
+    #anuncio-texto {
+      width: 50%;
+      border-right: 4px solid #ffcc00;
+      padding-right: 2rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .anuncio-container {
+      flex-direction: column;
+    }
+  
+    .anuncio-texto {
+      width: 100%;
+      border-right: none;
+      padding-right: 0;
+    }
+  }
+  
+  /* Adicione outras regras de estilo conforme necessário */
+  
