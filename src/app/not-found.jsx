@@ -9,7 +9,7 @@ export default function NotFound() {
 
       <main className="container bg-slate-900 mt-10 mx-auto rounded p-4 max-w-lg">
         <h2>Página não encontrada</h2>
-        <Button href="/">Voltar para home</Button>
+        <Button href="/">Voltar para Home</Button>
       </main>
     </>
   )
