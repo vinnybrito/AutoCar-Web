@@ -8,22 +8,21 @@ export default function ComboBoxImgAnuncio() {
     return (
         <>
             <label htmlFor="img">Escolha uma imagem</label>
-            <input type="hidden" name="image" value={value}/>
+            <input type="hidden" name="image" value={value} />
 
             <div className="flex gap-4">
                 {images.map(({ name, image }) =>
-                    
-                        <button 
-                            key={name} 
-                            className={`${value===name? "hover:scale-110": ""} `}
-                            onClick={() => setValue(name)}
-                        >
-                            {image}
-                        </button>
-                    
+
+                    <button
+                        key={name}
+                        className={`${value === name ? "hover:scale-110" : ""} `}
+                        onClick={() => setValue(name)}
+                    >
+                        {image}
+                    </button>
+
                 )}
             </div>
-
         </>
     )
 }

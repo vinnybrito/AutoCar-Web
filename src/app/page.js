@@ -5,13 +5,26 @@ import Login from '../assets/imageLogin.jpg'
 import InputText from '@/components/input-text'
 import Button from '@/components/button'
 import { useForm } from "react-hook-form"
+import { useContext } from 'react'
+import { AuthContext } from '@/context/AuthContext'
+import { useRouter } from 'next/navigation'
+import { toast } from 'react-hot-toast'
 
 export default function Home() {
 
+  const { push } = useRouter()
   const { register, handleSubmit } = useForm()
+  const { login } = useContext(AuthContext)
 
-  const onSubmit = (data) => {
-    console.log(data)
+  const onSubmit = async (data) => {
+    const resp = await login(data.email, data.senha)
+
+    if (resp?.error) {
+      toast.error(resp.error)
+      return
+    }
+
+    push("/dashboard")
   }
 
   return (
@@ -30,11 +43,9 @@ export default function Home() {
             <InputText Label="Senha" register={register} name="senha" type="password"/>
             <Button type='button'>Entrar</Button>
           </form>
-
         </main>
-
+        
       </div>
-
     </>
   )
 }
